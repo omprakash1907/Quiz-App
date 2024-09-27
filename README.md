@@ -41,8 +41,8 @@ Before you begin, ensure you have met the following requirements:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/blog-post-website.git
-    cd blog-post-website
+    https://github.com/omprakash1907/Quiz-App.git
+    cd Quiz-App
     ```
 
 2. **Install dependencies for the frontend**:
