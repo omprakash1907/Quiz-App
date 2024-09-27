@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,339 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Layout for the quiz page with a sidebar */
+.quiz-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+/* Sidebar styling */
+.sidebar {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  margin-right: 20px;
+}
+
+.sidebar-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.questions-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.question-number {
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.question-number.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Main quiz container */
+.quiz-container {
+  max-width: 800px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Quiz title */
+.quiz-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Question text */
+.question-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Answer list */
+.answer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.answer-list li {
+  margin-bottom: 10px;
+}
+
+.answer-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  text-align: left;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.answer-btn:hover {
+  background-color: #d0d0d0;
+}
+
+/* Selected button */
+.answer-btn.selected {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+
+/* Navigation buttons */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.prev-btn, .next-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.prev-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: #0056b3;
+}
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
+
+
+/* Main container for the quiz list */
+.quiz-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.quiz-list-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #003366;
+}
+
+/* Container for all quiz cards */
+.quiz-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Individual quiz card */
+.quiz-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 350px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quiz-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #00509e;
+}
+
+.quiz-description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #666;
+  min-height: 60px;
+}
+
+/* Button to start the quiz */
+.start-quiz-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00509e;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.start-quiz-btn:hover {
+  background-color: #003366;
+}
+
+
+/* Main container for the score summary */
+.score-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Header section */
+.score-header {
+  background-color: #000000;
+  color: white;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Content section with score and result */
+.score-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.score-content h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Percentage display */
+.score-percentage {
+  font-size: 72px;
+  font-weight: bold;
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.score-percentage span {
+  color: inherit;
+}
+
+/* Result level (Low, Medium, High) */
+.score-level {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+/* Indicator dots for Low, Medium, High */
+.score-indicators {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.indicator {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.red-dot {
+  background-color: #ff0000;
+}
+
+.orange-dot {
+  background-color: #ffa500;
+}
+
+.green-dot {
+  background-color: #00ff00;
+}
+
+/* Home Button */
+.home-btn {
+  background-color: #003366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.home-btn:hover {
+  background-color: #00509e;
+}
+
+.home-btn svg {
+  margin-right: 8px;
 }
