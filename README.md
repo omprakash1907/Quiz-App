@@ -2,6 +2,11 @@
 
 This **Quiz Application** is an interactive platform where users can explore and participate in quizzes across various categories. It is designed to provide a clean and responsive interface for users to test their knowledge on a variety of topics without the need for authentication (login or logout). Whether you're into general knowledge, science, history, or technology, this quiz app offers something for everyone.
 
+## 🌐 Project Links
+
+- **Frontend**: [Expense Management Frontend](https://quiz-app-nu-swart.vercel.app/)
+- **Backend**: [Expense Management Backend](https://quiz-app-qh9b.onrender.com/api)
+
 ## **🌟 Features**
 
 - 📰 **Browse All Quizzes**: View a wide range of quizzes across different categories.
