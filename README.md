@@ -4,8 +4,8 @@ This **Quiz Application** is an interactive platform where users can explore and
 
 ## 🌐 Project Links
 
-- **Frontend**: [Expense Management Frontend](https://quiz-app-nu-swart.vercel.app/)
-- **Backend**: [Expense Management Backend](https://quiz-app-qh9b.onrender.com/api)
+- **Frontend**: [Quiz App Frontend](https://quiz-app-nu-swart.vercel.app/)
+- **Backend**: [Quiz App Backend](https://quiz-app-qh9b.onrender.com/api)
 
 ## **🌟 Features**
 
